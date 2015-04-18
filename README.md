@@ -50,3 +50,5 @@ as the first line of the file:
 
 <code>use mspcostmodel;</code>
 
+<h3>Disclaimer</h3>
+This is less a legal disclaimer - more a you should be aware one. First of all this was really a personal challenge and learning experience. The code is not fantasticaslly well structured and brilliant. It probably needs some surgery to better structure the objects and methods. That said it works and can save a lot of time setting up an excel spresheet to do the same thing. Areas never finished include the Sales Forecasting engine which would enable users to project revenues and capacity into the future. Hope this helps the community visualise a costing tool and if nothing else it provides a full analsys of the cost components that go into building a business case for Cloud or IT in general. Thanks EJK.
