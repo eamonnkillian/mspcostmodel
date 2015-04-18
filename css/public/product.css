@@ -1,0 +1,179 @@
+/*
+  Created originally on : 19-Mar-2014
+  Author      : Eamonn Killian
+  Web         : www.eamonnkillian.com
+  Contact     : eamonnkillian@gmail.com
+
+  This is the main css file for the Cost Model for DC Assets part of the web application 
+  which is designed to provide a module for creating, managing and tracking of the costs associated 
+  with the DC Assets aspects of a Managed Service Provider (MSP) or Cloud Service Provider(CSP).
+
+*/
+
+@import url(http://fonts.googleapis.com/css?family=Titillium+Web:400,400italic,600,700);
+
+/*
+
+    Develop a standard Default User View called Mainpage with styles
+
+*/
+
+
+#productMain {
+    background-color: #fff;
+    display: block;
+    margin: 0 auto;
+    padding: 5%;
+    width: 100%;
+    max-width: 1000px;
+    height: 550px;
+}
+
+
+#productMainMID {
+    position: relative;
+    float: left;
+    height: 500px;
+    width: 100%;
+    text-align: left;
+    overflow: auto;
+}
+
+select {
+    padding: 5px;
+    background-color: #fff;
+    border: 0;
+    width: 80px;
+
+    font-size: 12px;
+}
+
+.menuItems {
+    position: relative;
+    left: 20px;
+    width: 750px;
+    border-radius: 0px;
+    text-align: left;
+}
+
+.itemForm {
+    position: relative;
+    width: 700px;
+    border-radius: 0px;
+    display: none;
+    margin: 0 auto;
+}
+
+.menuTable {
+    border: 0;
+}
+
+.textTD {
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.imgTD {
+    padding-top: 10px;
+}
+
+.displayTable {
+    border: 0px solid #fcf7ec;
+    width: 700px;
+    margin: 0 auto;
+    font-size: 14px;
+}
+
+.emptyTD {
+    display: none;
+}
+
+#currencyID {
+
+    font-weight: 700;
+}
+
+.tableTH {
+    width: 120px;
+    font-size: 14px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    background-color: #3184a1;
+    color: #373737;
+}
+
+.tableTD {
+    width: 120px;
+    font-size: 12px;
+    padding: 5px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.tableInputTD {
+
+    font-weight: 400;
+    width: 65px;
+    height: 25px;
+    border: #000 solid 1px;
+    font-size: 12px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    background-color: #fcf7ec;
+    text-align: center;
+    color: #000;
+}
+
+.tableInputTH {
+
+    font-weight: 700;
+    width: 90px;
+    height: 25px;
+    border: 0;
+    font-size: 14px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    background-color: #3184a1;
+    text-align: center;
+    color: #373737;
+}
+
+.updateButton {
+
+    width: 100px;;
+    height: 30px;
+    border: #373737 solid 0px;
+    cursor:pointer;
+    background-color: #373737;
+    color:white;
+    margin-left: 6px;
+    font-size:14px;
+    padding: 2px;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    margin-top:-4px;
+    font-weight:700;
+}
+
+.updateButton:hover {
+    background-color:#098241;
+    color: #000;
+}
+
+.errorSpan {
+
+    font-weight: 700;
+    font-size: 14px;
+    color: #f00;
+}
+
+.tableTDbaseCurrency {
+    text-align: center;
+}

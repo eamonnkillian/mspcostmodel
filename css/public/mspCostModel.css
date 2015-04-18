@@ -1,0 +1,702 @@
+/*
+  Created originally on : 08-Mar-2014
+  Author      : Eamonn Killian
+  Web         : www.eamonnkillian.com
+  Contact     : eamonnkillian@gmail.com
+
+  This is the main css file for the mspCostModeller web application which is designed
+  to provide a secure login authenticated application for the tracking and management
+  of the costs associated with running a Managed Service Provider (MSP).
+
+  The application includes:
+  1) A front end web interface utilising CSS styling and JQuery animation
+  2) A set of application code
+  3) A database back end in MySQL for storing the information
+
+  The business objective for the application is to enable an MSP business to model their
+  end to end costs and to isolate a set of key metrics which enable business and operational
+  decisions concerning the management of the service to be made in full cognisance of the
+  cost impacts.
+
+  The final design feature was to build this as a module for a broader set of applications
+  with an immediate follow on being the mspPriceModeller.
+*/
+
+@import url(http://fonts.googleapis.com/css?family=Montserrat);
+
+/*
+
+    Develop a standard HTML Body & Container Section with styles
+
+*/
+
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #67b5d1;
+    color: #505050;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.8;
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    line-height: 1;
+    font-weight: 700;
+}
+a {
+    text-decoration: none;
+    color: #67b5d1;
+}
+a:hover {
+    color: #3184a1;
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/*
+
+    Develop a standard HTML Header Section with styles
+
+*/
+
+
+
+
+
+/*
+
+    Develop a standard HTML Footer Section with styles
+
+*/
+
+#footer {
+    position: relative;
+    float: left;
+    width: 100%;
+    max-width: 1000px;
+    height: 200px;
+    background-color: #3184a1;
+}
+
+#mspFooterLHS {
+    position: relative;
+    float: left;
+    padding-top: 20px;
+    width: 40%;
+}
+
+#mspFooterMID {
+    position: relative;
+    float: left;
+    width: 10%;
+    text-align: left;
+}
+
+#mspFooterRHS {
+    position: relative;
+    float: right;
+    width: 50%;
+    text-align: right;
+    padding-right: 20px;
+    padding-top: 20px;
+    color: #fff;
+}
+
+#mspFooterRHSSpan {
+    text-transform: uppercase;
+    font-size: 18px;
+}
+
+#mspFooterRHS a {
+    text-decoration: none;
+    color: #fff;
+}
+
+#mspFooterRHS a:hover {
+    text-decoration: none;
+    color: #283949;
+}
+
+@font-face {
+    font-family: 'Entypo-Social';
+    src: url('../../font/entypo-social.eot');
+    src: local('☺'), 
+        url('../../font/entypo-social.woff') format('woff'), 
+        url('../../font/entypo-social.ttf') format('truetype'),
+        url('../../font/entypo-social.svg#webfontIyfZbseF') format('svg');
+}
+
+.data-icon {
+    font-family: 'Entypo-Social';
+    content: attr(data-icon);
+    font-size: 65px;
+    color: white;
+    background: none;
+    text-decoration: none;
+}
+
+#mspFooterLHSIcons a:hover {
+    color: #283949;
+}
+
+#mspFooterLHSIcons {
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    padding-top: 15px;
+    text-align: center;
+}
+
+.mspFooterLHSIconsSpan {
+    margin: 0 1.3em;
+}
+
+/*
+
+    Develop a standard HTML Error Section with styles
+
+*/
+
+#errorMain {
+    background-color: #fff;
+    display: block;
+    margin: 0 auto;
+    padding: 5%;
+    width: 100%;
+    max-width: 1000px;
+    height: 550px;
+}
+
+#mspError {
+    position: relative;
+    float: left;
+    width: 100%;
+    height: 300px;
+    text-align: left;
+    padding-top: 5px;
+    padding-left: 5%;
+    padding-right: 5%;
+    border: 0;
+    font-size: 14px;
+    overflow: auto;
+}
+
+#mspErrorMIDInner {
+    position: relative;
+    float: left;
+    text-align: center;
+    padding-top: 20px;
+    width: 30%;
+}
+
+#mspErrorMIDInner1 {
+    position: relative;
+    float: left;
+    padding-top: 50px;
+    width: 70%;
+}
+
+/*
+
+    Develop a standard HTML Help Section with styles
+
+*/
+
+
+#helpMain {
+    background-color: #fff;
+    display: block;
+    margin: 0 auto;
+    padding: 5%;
+    width: 100%;
+    max-width: 1000px;
+    height: 550px;
+}
+
+#mspHelp {
+    position: relative;
+    float: left;
+    width: 100%;
+    text-align: left;
+    padding-top: 5px;
+    padding-left: 5%;
+    padding-right: 5%;
+    border: 0;
+    font-size: 14px;
+    overflow: auto;
+}
+
+
+/*
+
+    Develop a standard HTML Main Section with styles
+
+*/
+
+#outer-wrapper {
+    height: 100%;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+#wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 10;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+#divider-bar {
+    width: 100%;
+    max-width: 1000px;
+    height: 60px;
+    background-color: #283949;
+}
+
+#divider-bar1 {
+    width: 100%;
+    max-width: 1000px;
+    height: 20px;
+    background-color: #283949;
+}
+
+#top-banner {
+    width: 100%;
+    max-width: 1000px;
+    height: 150px;
+    background-color: #3184a1;
+}
+
+#top-banner-left {
+    position: relative;
+    float: left;
+    font-family:'Montserrat', sans-serif;
+    text-align: left;
+    font-size: 18px;
+    color: #fff;
+    width: 30%;
+    height: 140px;
+    margin: 0 auto;
+}
+
+#top-banner-left-inner {
+    margin: auto;
+    padding-left: 20px;
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+    height: 50%;
+}
+
+#top-banner-right {
+    position: relative;
+    float: right;
+    font-family:'Montserrat', sans-serif;
+    text-align: right;
+    font-size: 18px;
+    color: #fff;
+    width: 70%;
+    height: 140px;
+    margin: 0 auto;
+} 
+
+#top-banner-right-inner {
+    margin: auto;
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+    height: 50%;
+} 
+
+#top-banner-right-inner ul li {
+    margin: 0;
+    display: inline;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#top-banner-right-inner a {
+    text-align: right;
+    color: #fff;
+}
+
+#top-banner-right a:hover {
+    text-align: right;
+    color: #283949;
+}
+
+#span-logo {
+    font-size:24px;
+    font-weight: 400;
+    text-align:center;
+}
+
+#main {
+    background-color: #fff;
+    display: block;
+    margin: 0 auto;
+    padding: 5%;
+    width: 100%;
+    max-width: 1000px;
+    height: 550px;
+    overflow: auto;
+}
+
+#main1 {
+    display: none;
+    background-color: #fff;
+    margin: 0 auto;
+    padding: 5%;
+    width: 100%;
+    max-width: 1000px;
+    height: 550px;
+    overflow: auto;
+}
+
+#horizontal-spacer {
+    position: relative;
+    float: left;
+    text-align: center;
+    padding-top: 30px;
+    height: 150px;
+    width: 100%;
+}
+
+#spacer {
+    position: relative;
+    float: left;
+    text-align: center;
+    height: 300px;
+    width: 260px;
+}
+
+#spacer-divider {
+    position: relative;
+    float: left;
+    text-align: center;
+    height: 300px;
+    width: 5%;
+}
+
+#about-cost-modeller {
+    position: absolute;
+    bottom: 0;
+    margin-left: 45%;
+    width: 40px;
+    height: 40px;
+    border: solid 0px #000;
+}
+
+
+button {
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+    z-index: 12;
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+
+nav.menu {
+    position: fixed;
+    z-index: 20;
+    background-color: #67b5d1;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+nav.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+nav.menu a {
+    font-weight: 300;
+    color: #fff;
+}
+
+nav.push-menu-right {
+    top: 0;
+    width: 300px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 100%;
+}
+
+nav.push-menu-right li.close-menu {
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+    padding-left: 10px;
+    padding-top: 15px;
+    width: 300px;
+    height: 60px;
+    text-align:left;
+    background-color: #67b5d1;
+}
+
+nav.push-menu-right li.close-menu:hover {
+    outline: none;
+    background-color: #3184a1;
+}
+
+nav.push-menu-right li.li-header {
+    font-weight: 700;
+    height: 30px;
+    padding-top: 10px;
+    padding-left: 10px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #fff;
+}
+
+nav.push-menu-right li.li-header:hover {
+    background-color: #67b5d1;
+}
+
+nav.push-menu-right li {
+    display: block;
+    text-align: left;
+    height: 30px;
+}
+
+nav.push-menu-right li:hover {
+    background-color: #3184a1;
+}
+
+nav.push-menu-right li:first-child {
+    border-top: none
+}
+
+nav.push-menu-right li:last-child {
+    border-bottom: none
+}
+
+nav.push-menu-right a {
+    display: block;
+    padding-top: 5px;
+    padding-left: 15px;
+    padding-bottom: 5px;
+    font-size: 12px;
+}
+
+nav.push-menu-right {
+    right: -300px
+}
+
+body.pmr-open nav.push-menu-right {
+    right: 0
+}
+body.pml-open #wrapper {
+    left: 300px
+}
+body.pmr-open #wrapper {
+    left: -300px
+}
+
+button.nav-toggler {
+    width: 60px;
+    height: 60px;
+    color: #fff;
+    font-weight: 700;
+    font-size: 20px;
+    background-color: #283949;
+    position: relative;
+    top: 0px;
+    float: right;
+}
+
+@media all and (max-width: 860px) { 
+    .buttons br {
+        display: none
+    }
+    .buttons button {
+        padding: 10px 20px
+    }
+}
+    
+@media all and (max-width: 760px) {
+    #spacer-divider {
+        width: 100%;
+        height: 40px;
+    }
+
+    #spacer {
+        width: 100%;
+    }  
+    
+}
+
+@media all and (max-width: 660px) {
+    #spacer-divider {
+        width: 100%;
+        height: 40px;
+    }
+
+    #spacer {
+        width: 100%;
+    }
+
+    nav.slide-menu-top ul,
+    nav.slide-menu-bottom ul,
+    nav.push-menu-top ul,
+    nav.push-menu-bottom ul {
+        //padding: 5px 0 0 0
+    }
+    nav.slide-menu-top a,
+    nav.slide-menu-bottom a,
+    nav.push-menu-top a,
+    nav.push-menu-bottom a {
+        line-height: 30px;
+        padding: 0 2px;
+        font-size: 12px;
+    }
+    nav.slide-menu-top button.close-menu,
+    nav.slide-menu-bottom button.close-menu,
+    nav.push-menu-top button.close-menu,
+    nav.push-menu-bottom button.close-menu {
+        line-height: 30px;
+        padding: 0 2px;
+    }
+}
+
+@media all and (max-width: 600px) {
+    #spacer-divider {
+        width: 100%;
+        height: 40px;
+    }
+
+    #spacer {
+        width: 100%;
+    }
+    
+    #top-banner-left-inner {
+        position: relative;
+        float: left;
+        margin: 0 auto;
+    }
+
+    #top-banner-right-inner {
+        position: relative;
+        float: left;
+        margin: 0 auto;
+    }
+    
+    nav.slide-menu-top ul,
+    nav.slide-menu-bottom ul,
+    nav.push-menu-top ul,
+    nav.push-menu-bottom ul {
+        //padding: 5px 0 0 0
+    }
+    nav.slide-menu-top a,
+    nav.slide-menu-bottom a,
+    nav.push-menu-top a,
+    nav.push-menu-bottom a {
+        line-height: 30px;
+        padding: 0 2px;
+        font-size: 12px;
+    }
+    nav.slide-menu-top button.close-menu,
+    nav.slide-menu-bottom button.close-menu,
+    nav.push-menu-top button.close-menu,
+    nav.push-menu-bottom button.close-menu {
+        line-height: 30px;
+        padding: 0 2px;
+    }
+}
+
+@media all and (max-width: 330px) { 
+    #spacer-divider {
+        width: 100%;
+        height: 40px;
+    }
+
+    #spacer {
+        width: 100%;
+    }
+    
+    #top-banner-left-inner {
+        position: relative;
+        float: left;
+        margin: 0 auto;
+    }
+    
+    #top-banner-right-inner {
+        position: relative;
+        float: left;
+        margin: 0 auto;
+    }
+
+    nav.slide-menu-left,
+    nav.slide-menu-right,
+    nav.push-menu-left,
+    nav.push-menu-right {
+        top: 0;
+        width: 100%;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+    nav.slide-menu-left,
+    nav.push-menu-left {
+        left: -100%
+    }
+    nav.slide-menu-right,
+    nav.push-menu-right {
+        right: -100%
+    }
+    body.sml-open nav.slide-menu-left,
+    body.pml-open nav.push-menu-left {
+        left: 0
+    }
+    body.smr-open nav.slide-menu-right,
+    body.pmr-open nav.push-menu-right {
+        right: 0
+    }
+    body.pml-open #wrapper {
+        left: 100%
+    }
+    body.pmr-open #wrapper {
+        left: -100%
+    }
+}

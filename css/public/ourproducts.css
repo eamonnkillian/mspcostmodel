@@ -1,0 +1,494 @@
+/*
+  Created originally on : 19-Mar-2014
+  Author      : Eamonn Killian
+  Web         : www.eamonnkillian.com
+  Contact     : eamonnkillian@gmail.com
+
+  This is the main css file for the Cost Model for DC Assets part of the web application 
+  which is designed to provide a module for creating, managing and tracking of the costs associated 
+  with the DC Assets aspects of a Managed Service Provider (MSP) or Cloud Service Provider(CSP).
+
+
+    Develop a standard Default User View called Mainpage with styles
+
+*/
+
+#ourproductsMain {
+    background-color: #fff;
+    display: block;
+    margin: 0 auto;
+    padding: 3%;
+    width: 100%;
+    max-width: 1000px;
+    height: 550px;
+}
+
+#ourproductsMainMID {
+    position: relative;
+    float: left;
+    height: 500px;
+    width: 100%;
+    text-align: left;
+}
+
+#ourproductsMainMIDTopBannerRHSCommandOutput {
+    position: relative;
+    height: 30px;
+    width: 400px;
+    border-radius: 10px;
+    border: 0;
+    padding-top: 8px;
+    padding-left: 10px;
+    font-size: 12px;
+}
+
+#ourproductsMainMIDMainSection {
+    position: absolute;
+    top:0px;
+    left:0px;
+    width: 100%;
+    height: 470px;
+}
+
+#ourproductsMainMIDMainSectionLHS {
+    position: relative;
+    float: left;
+    height: 480px;
+    width: 30%;
+}
+
+#totalCapacity {
+    position: relative;
+    float: left;
+    border: 3px solid #000;
+    text-align: center;
+    padding: 5px;
+    width: 100%;
+}
+
+#dropdownPosition {
+    position: relative;
+    float: left;
+    width: 100%;
+    border: 0px;
+    padding: 2%;
+}
+
+.ourproductsSelector {
+    position: relative;
+    float: left;
+    padding: 5px;
+}
+
+.ourproductsInputSubmit {
+
+    float:left;
+    width: 260px;
+    border: #373737 solid 4px;
+    cursor:pointer;
+    background-color: #373737;
+    color:white;
+    margin-left: 10px;
+    font-size:12px;
+    padding-top:8px;
+    padding-bottom:8px;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    margin-top:-4px;
+    font-weight:700;
+}
+
+.ourproductsInputSubmit:hover{
+    background-color: #3184a1;
+    color: #000;
+    font-size: 12px;
+}
+
+
+#ourproductsFormforAdd {
+    display:none;
+}
+
+table, td, th {
+    border: 0px solid #fcf7ec;
+    margin: 0 auto;
+}
+
+th {
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    background-color: #3184a1;
+    color: #000;
+    font-size: 12px;
+}
+
+td {
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    background-color: #fff;
+    font-size: 12px;
+}
+
+select {
+    padding: 5px;
+    background-color: #fff;
+    border: 0;
+    width: 200px;
+    font-size: 12px;
+}
+
+#ourproductsForSel {
+    padding: 5px;
+    background-color: #EF6A57;
+
+    font-weight: bold;
+    height: 30px;
+    width: 125px;
+    border: 0;
+    color: #373737;
+}
+
+#ourproductsSuccessAdd {
+    display: none;
+}
+
+#ourproductsDelete {
+
+    float:left;
+    width: 100px;
+    height: 20px;
+    border: #373737 solid 0px;
+    cursor:pointer;
+    background-color: #373737;
+    color:white;
+    margin-left: 10px;
+    font-size:10px;
+    padding: 2px;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    margin-top:-4px;
+    font-weight:700;
+}
+
+#ourproductsDelete:hover{
+    background-color:#EF6A57;
+    color: #000;
+}
+
+#ourproductsModify {
+
+    float:left;
+    width: 100px;
+    height: 20px;
+    border: #373737 solid 0px;
+    cursor:pointer;
+    background-color: #373737;
+    color:white;
+    margin-left: 10px;
+    font-size:10px;
+    padding: 2px;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    margin-top:-4px;
+    font-weight:700;
+}
+
+#ourproductsModify:hover{
+    background-color:#098241;
+    color: #fff;
+}
+
+.hiddenTD{
+    background-color: #fcf7ec;
+    padding-top: 6px;
+}
+
+input {
+    border: 0;
+    width: 170px;
+}
+
+.ourproductsTableHeader {
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+    text-decoration: underline;
+}
+
+.inputModify {
+
+    font-size: 12px;
+    text-align: right;
+    border:0;
+    width: 175px;
+}
+
+.ourproductsAddHeader {
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+    text-decoration: underline;
+}
+
+.ourproductsAddInputSubmit {
+
+    width: 270px;
+    border: #373737 solid 2px;
+    cursor:pointer;
+    background-color: #373737;
+    color:white;
+    margin-left: 10px;
+    font-size:14px;
+    padding-top:8px;
+    padding-bottom:8px;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    margin-top:-4px;
+    font-weight:700;
+}
+
+.ourproductsAddInputSubmit:hover{
+    background-color: #67b5d1;
+    color: #000;
+}
+
+.ourproductsInputSel {
+    background-color: #fff;
+    background-image: url(../../img/downloadred.png);
+    background-size: 30px 30px;
+    background-position: 255px 6px;
+    background-repeat: no-repeat;
+    padding-left: 10px;
+    border:0!important;
+    height: 40px;
+    width: 300px;
+    font-size: 14px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.ourproductsInputSel:focus{
+    background-color:#EF6A57;
+    border:#EF6A57 solid 3px;
+    background-image: url(../../img/download.png);
+}
+
+
+#ourproductsMainMIDMainSectionRHS {
+    position: relative;
+    float: left;
+    height: 480px;
+    width: 70%;
+    text-align: center;
+    overflow: auto;
+}
+
+
+#ourproductsMainRHS {
+    position: relative;
+    float: left;
+    height: 500px;
+    width: 20px;
+    text-align: right;
+}
+
+#emptyshowourproductsCostsTableTD {
+    background-color: #fff;
+    text-align: center;
+}
+
+.percentageshowourproductsCostsTableTD {
+    text-align: right;
+}
+
+.monetaryshowourproductsCostsTableTD {
+    text-align: right;
+}
+
+.percentage {
+    width: 50px;
+    border: 0px;
+    text-align: right;
+    background-color: #fcf7ec;
+}
+
+.monetary {
+    width: 110px;
+    border: 0px;
+    text-align: right;
+    background-color: #fcf7ec;
+}
+
+.alphanumeric {
+
+    font-size: 12px;
+    width: 170px;
+    border: 0px;
+    text-align: right;
+    background-color: #fcf7ec;
+}
+
+.alphanumerictype {
+
+    font-size: 12px;
+    width: 170px;
+    border: 0px;
+    text-align: right;
+    background-color: #fcf7ec;
+}
+
+.deleteButton {
+
+    float:left;
+    width: 80%;
+    height: 20px;
+    border: #373737 solid 0px;
+    cursor:pointer;
+    background-color: #373737;
+    color:white;
+    margin-left: 10px;
+    font-size:10px;
+    padding: 2px;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    margin-top:-4px;
+    font-weight:700;
+}
+
+.deleteButton:hover {
+    background-color:#EF6A57;
+    color: #000;
+}
+
+.updateButton {
+    float:left;
+    width: 80%;
+    height: 20px;
+    border: #373737 solid 0px;
+    cursor:pointer;
+    background-color: #373737;
+    color:white;
+    margin-left: 10px;
+    font-size:10px;
+    padding: 2px;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    margin-top:-4px;
+    font-weight:700;
+}
+
+.updateButton:hover {
+    background-color:#098241;
+    color: #000;
+}
+
+.inputModify {
+    border:0;
+    width: 175px;
+    background-color: #fcf7ec;
+}
+
+#ourproductsSelect {
+    width: 100%;
+}
+
+.ourproductsInputSel {
+    background-color: #fff;
+    background-image: url(../../img/downloadred.png);
+    background-size: 25px 25px;
+    background-position: 205px 8px;
+    background-repeat: no-repeat;
+    padding-left: 10px;
+    border:0!important;
+    height: 40px;
+    width: 100%;
+    font-size: 14px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.ourproductsInputSel:focus{
+    background-color:#fff;
+    border:#EF6A57 solid 3px;
+    background-image: url(../../img/downloadred.png);
+}
+
+#ourproductsMenu {
+    display: none;
+}
+
+#showourproductsCostsTable {
+    text-align: right;
+}
+
+#showourproductsCostsTable th td {
+    width: 150px;
+}
+
+
+#ourproductsMenuTable {
+   border: 3px;
+}
+
+.selectLocation {
+    width: 200px;
+
+}
+
+textarea {
+
+    border:0;
+    background-color: #fcf7ec;
+    text-align: right;
+    font-size: 12px;
+}
+
+.textareaInput {
+
+    border:0;
+    background-color: #fcf7ec;
+    text-align: right;
+    font-size: 12px;
+}
+
+.radio {
+    width: 35px;
+}
+
+#currencyShow {
+    font-family: Arial, sans-serif;
+    font-weight: 700;
+}
+
+.currencyShow {
+    font-family: Arial, sans-serif;
+    font-weight: 700;
+}
+
+.dateType {
+
+    font-size: 12px;
+    background-color: #fcf7ec;
+    text-align: right;
+}
+
+.datepicker {
+
+    font-size: 12px;
+    background-color: #fcf7ec;
+    text-align: right;
+}
+
+.ui-datepicker-header {
+    background-color: #000;
+}

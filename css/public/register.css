@@ -1,0 +1,427 @@
+/*
+  Created originally on : 08-Mar-2014
+  Author      : Eamonn Killian
+  Web         : www.eamonnkillian.com
+  Contact     : eamonnkillian@gmail.com
+
+  This is the main css file for the mspCostModeller web application which is designed
+  to provide a secure login authenticated application for the tracking and management
+  of the costs associated with running a Managed Service Provider (MSP).
+
+  The application includes:
+  1) A front end web interface utilising CSS styling and JQuery animation
+  2) A set of application code
+  3) A database back end in MySQL for storing the information
+
+  The business objective for the application is to enable an MSP business to model their
+  end to end costs and to isolate a set of key metrics which enable business and operational
+  decisions concerning the management of the service to be made in full cognisance of the
+  cost impacts.
+
+  The final design feature was to build this as a module for a broader set of applications
+  with an immediate follow on being the mspPriceModeller.
+*/
+
+/*
+
+    Develop a standard Registration Main Section with styles
+
+*/
+
+#registerMain {
+    background-color: #fff;
+    display: block;
+    margin: 0 auto;
+    padding: 2%;
+    width: 100%;
+    max-width: 1000px;
+    height: 550px;
+}
+
+#mspRegistration {
+    position: relative;
+    float: left;
+    width: 100%;
+    padding-top: 0px;
+    padding-left: 30px;
+    background-color: #fff;
+    border-radius: 0px;
+}
+
+#mspRegistrationLHS {
+    position: relative;
+    float: left;
+    width: 20px;
+    text-align: left;
+}
+
+#mspRegistrationMID {
+    position: relative;
+    float: left;
+    width: 100%;
+    height: 470px;
+    text-align: left;
+}
+
+#mspRegistrationForm {
+    position: relative;
+    float: left;
+    color:#000;
+    font-weight:500;
+    font-size: 18px;
+    border-radius: 0;
+    line-height: 22px;
+    background-color: #b4b4b4;
+    padding: 13px 13px 13px 54px;
+    margin-bottom: 10px;
+    width:100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 3px solid rgba(0,0,0,0);
+}
+
+#mspRegistrationFormInnerTop {
+    position: relative;
+    float: left;
+    width: 100%;
+}
+
+#mspRegistrationFormLHS {
+    position: relative;
+    float: left;
+    width: 50%;
+    
+}
+
+#mspRegistrationPara {
+    position: relative;
+    float: left;
+    width: 100%;
+    padding-top: 5px;
+    padding-left: 40px;
+}
+
+#mspRegistrationFormRHS {
+    position: relative;
+    float: left;
+    width: 50%;
+    height: 280px;
+    
+}
+
+#mspRegistrationFormInnerBottom {
+    position: relative;
+    float: left;
+    width: 100%;
+    padding-top: 20px;
+    padding-left: 100px;
+    text-align: center;
+    
+}
+
+.regloginErrors {
+    position: relative;
+    float:left;
+    width: 100%;
+    border: #373737 solid 0px;
+    cursor:pointer;
+    color: #000;
+    font-size:12px;
+    padding-top:2px;
+    padding-bottom:8px;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    margin-top:-4px;
+    font-weight:700;
+}
+
+.mspRegistrationInputLogin{
+    background-image: url(../../img/emailusred.png);
+    background-size: 30px 25px;
+    background-position: 11px 16px;
+    background-repeat: no-repeat;
+    padding-left: 54px;
+    border:#fff solid 3px;
+    height: 55px;
+    width: 300px;
+    font-size: 14px;
+}
+
+.mspRegistrationInputLogin:focus{
+    background-color:#67b5d1;
+    border:#67b5d1 solid 3px;
+    background-image: url(../../img/emailus.png);
+}
+
+.mspRegistrationInputLogin::-webkit-input-placeholder {
+    padding-top: 2px;
+    color: #67b5d1;
+}    
+.mspRegistrationInputLogin:-moz-placeholder {
+    /* FF 4-18 */
+    padding-top: 2px;
+    color: #67b5d1;
+}
+.mspRegistrationInputLogin::-moz-placeholder {
+    /* FF 19+ */
+    padding-top: 2px;
+    color: #67b5d1;
+}    
+.mspRegistrationInputLogin:-ms-input-placeholder {
+    /* IE 10+ */
+    padding-top: 2px;
+    color: #67b5d1;
+}
+
+
+.mspRegistrationInputPassword{
+    background-image: url(../../img/passwordred.png);
+    background-size: 30px 30px;
+    background-position: 11px 10px;
+    background-repeat: no-repeat;
+    padding-left: 54px;
+    border:#fff solid 3px;
+    height: 55px;
+    width: 300px;
+    font-size: 14px;
+}
+
+.mspRegistrationInputPassword:focus{
+    background-color:#67b5d1;
+    border:#67b5d1 solid 3px;
+    background-image: url(../../img/password.png);
+}
+
+.mspRegistrationInputPassword::-webkit-input-placeholder {
+    padding-top: 2px;
+    color: #67b5d1;
+}    
+.mspRegistrationInputPassword:-moz-placeholder {
+    /* FF 4-18 */
+    padding-top: 2px;
+    color: #67b5d1;
+}
+.mspRegistrationInputPassword::-moz-placeholder {
+    /* FF 19+ */
+    padding-top: 2px;
+    color: #67b5d1;
+}    
+.mspRegistrationInputPassword:-ms-input-placeholder {
+    /* IE 10+ */
+    padding-top: 2px;
+    color: #67b5d1;
+}
+
+.mspRegistrationInputName{
+    background-image: url(../../img/myaccountred.png);
+    background-size: 30px 25px;
+    background-position: 11px 16px;
+    background-repeat: no-repeat;
+    padding-left: 54px;
+    border:#fff solid 3px;
+    height: 55px;
+    width: 300px;
+    font-size: 14px;
+}
+
+.mspRegistrationInputName:focus{
+    background-color:#67b5d1;
+    border:#67b5d1 solid 3px;
+    background-image: url(../../img/myaccount.png);
+}
+
+.mspRegistrationInputName::-webkit-input-placeholder {
+    padding-top: 0px;
+    color: #67b5d1;
+}    
+.mspRegistrationInputName:-moz-placeholder {
+    /* FF 4-18 */
+    padding-top: 0px;
+    color: #67b5d1;
+}
+.mspRegistrationInputName::-moz-placeholder {
+    /* FF 19+ */
+    padding-top: 0px;
+    color: #67b5d1;
+}    
+.mspRegistrationInputName:-ms-input-placeholder {
+    /* IE 10+ */
+    padding-top: 0px;
+    color: #67b5d1;
+}
+
+.mspRegistrationInputPhone{
+    background-image: url(../../img/phonered.png);
+    background-size: 30px 30px;
+    background-position: 11px 16px;
+    background-repeat: no-repeat;
+    padding-left: 54px;
+    border:#fff solid 3px;
+    height: 55px;
+    width: 300px;
+    font-size: 14px;
+}
+
+.mspRegistrationInputPhone:focus{
+    background-color:#67b5d1;
+    border:#67b5d1 solid 3px;
+    background-image: url(../../img/phone.png);
+}
+
+.mspRegistrationInputPhone::-webkit-input-placeholder {
+    padding-top: 1px;
+    color: #67b5d1;
+}    
+.mspRegistrationInputPhone:-moz-placeholder {
+    /* FF 4-18 */
+    padding-top: 1px;
+    color: #67b5d1;
+}
+.mspRegistrationInputPhone::-moz-placeholder {
+    /* FF 19+ */
+    padding-top: 1px;
+    color: #67b5d1;
+}    
+.mspRegistrationInputPhone:-ms-input-placeholder {
+    /* IE 10+ */
+    padding-top: 1px;
+    color: #67b5d1;
+}
+
+.mspRegistrationInputMobile{
+    background-image: url(../../img/mobilered.png);
+    background-size: 30px 30px;
+    background-position: 11px 16px;
+    background-repeat: no-repeat;
+    padding-left: 54px;
+    border:#fff solid 3px;
+    height: 55px;
+    width: 300px;
+    font-size: 14px;
+}
+
+.mspRegistrationInputMobile:focus{
+    background-color:#67b5d1;
+    border:#67b5d1 solid 3px;
+    background-image: url(../../img/mobile.png);
+}
+
+.mspRegistrationInputMobile::-webkit-input-placeholder {
+    padding-top: 1px;
+    color: #67b5d1;
+}    
+.mspRegistrationInputMobile:-moz-placeholder {
+    /* FF 4-18 */
+    padding-top: 1px;
+    color: #67b5d1;
+}
+
+.mspRegistrationInputMobile::-moz-placeholder {
+    /* FF 19+ */
+    padding-top: 1px;
+    color: #67b5d1;
+}    
+.mspRegistrationInputMobile:-ms-input-placeholder {
+    /* IE 10+ */
+    padding-top: 1px;
+    color: #67b5d1;
+}
+
+.mspRegistrationInputSel {
+    background-color: #fff;
+    background-image: url(../../img/downloadred.png);
+    background-size: 30px 30px;
+    background-position: 255px 11px;
+    background-repeat: no-repeat;
+    padding-left: 10px;
+    border:0!important;
+    height: 55px;
+    width: 300px;
+    font-size: 14px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.mspRegistrationInputSel:focus{
+    background-color:#67b5d1;
+    border:#67b5d1 solid 3px;
+    background-image: url(../../img/download.png);
+}
+
+.mspRegistrationInputSel::-webkit-input-placeholder {
+    padding-top: 0px;
+    color: #67b5d1;
+}    
+.mspRegistrationInputSel:-moz-placeholder {
+    /* FF 4-18 */
+    padding-top: 0px;
+    color: #67b5d1;
+}
+.mspRegistrationInputSel::-moz-placeholder {
+    /* FF 19+ */
+    padding-top: 0px;
+    color: #67b5d1;
+}    
+.mspRegistrationInputSel:-ms-input-placeholder {
+    /* IE 10+ */
+    padding-top: 0px;
+    color: #67b5d1;
+}
+
+.mspRegistrationInputSel.dropdown {
+     border: 0 !important;  /*Removes border*/
+     -webkit-appearance: none;  /*Removes default chrome and safari style*/
+     -moz-appearance: none;  /*Removes default style Firefox*/
+     color: #67b5d1;
+     width: 100%;
+  }
+  
+#mspRegistrationInputSubmit {
+    position: relative;
+    float:left;
+    width: 80%;
+    border: #373737 solid 4px;
+    cursor:pointer;
+    background-color: #373737;
+    color:white;
+    font-size:20px;
+    padding-top:8px;
+    padding-bottom:8px;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    font-weight:700;
+}
+
+#mspRegistrationInputSubmit:hover{
+    background-color:#67b5d1;
+    color: #000;
+}
+
+.mspSuccessInputSubmit {
+    position: relative;
+    float:left;
+    width: 300px;
+    border: #373737 solid 4px;
+    cursor:pointer;
+    background-color: #373737;
+    color:white;
+    font-size:20px;
+    padding-top:8px;
+    padding-bottom:8px;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    margin-top:-4px;
+    font-weight:700;
+}
+
+.mspSuccessInputSubmit:hover{
+    background-color:#67b5d1;
+    color: #000;
+}
+
+

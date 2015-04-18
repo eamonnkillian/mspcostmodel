@@ -1,0 +1,510 @@
+/*
+  Created originally on : 08-Mar-2014
+  Author      : Eamonn Killian
+  Web         : www.eamonnkillian.com
+  Contact     : eamonnkillian@gmail.com
+
+  This is the main css file for the mspCostModeller web application which is designed
+  to provide a secure login authenticated application for the tracking and management
+  of the costs associated with running a Managed Service Provider (MSP).
+
+  The application includes:
+  1) A front end web interface utilising CSS styling and JQuery animation
+  2) A set of application code
+  3) A database back end in MySQL for storing the information
+
+  The business objective for the application is to enable an MSP business to model their
+  end to end costs and to isolate a set of key metrics which enable business and operational
+  decisions concerning the management of the service to be made in full cognisance of the
+  cost impacts.
+
+  The final design feature was to build this as a module for a broader set of applications
+  with an immediate follow on being the mspPriceModeller.
+
+
+    Develop a standard Default User View called Mainpage with styles
+
+*/
+
+#cloudproviderMain {
+    background-color: #fff;
+    display: block;
+    margin: 0 auto;
+    padding: 5%;
+    width: 100%;
+    max-width: 1000px;
+    height: 550px;
+}
+
+#cloudproviderMainMID {
+    position: relative;
+    float: left;
+    height: 500px;
+    width: 100%;
+    text-align: left;
+}
+
+#cloudproviderMainMIDTopBanner {
+    position: absolute;
+    top:0px;
+    left:0px;
+    height: 70px;
+    width: 100%;
+    z-index: 10;
+}
+
+#cloudproviderMainMIDTopBannerLHS {
+    position: relative;
+    float: left;
+    height: 70px;
+    width: 30%;
+}
+
+#cloudproviderMainMIDTopBannerRHS {
+    position: relative;
+    float: left;
+    height: 65px;
+    width: 70%;
+    font-size: 16px;
+}
+
+#cloudproviderMainMIDTopBannerRHSCommandOutput {
+    position: relative;
+    height: 30px;
+    width: 400px;
+    background-color: #fcf7ec;
+    border-radius: 10px;
+    border: 0;
+    padding-top: 8px;
+    padding-left: 10px;
+    font-size: 12px;
+}
+
+#cloudproviderMainMIDMainSection {
+    position: absolute;
+    top:0px;
+    left:0px;
+    width: 100%;
+    padding-top: 10px;
+    height: 470px;
+    background-color: #fcf7ec;
+    
+}
+
+#cloudproviderMainMIDMainSectionLHS {
+    position: relative;
+    float: left;
+    height: 480px;
+    width: 30%;
+}
+
+.cloudproviderSelector {
+    position: relative;
+    float: left;
+    padding: 5px;
+}
+
+.cloudproviderInputSubmit {
+    
+    float:left;
+    width: 200px;
+    border: #373737 solid 4px;
+    cursor:pointer;
+    background-color: #373737;
+    color:white;
+    margin-left: 10px;
+    font-size:12px;
+    padding-top:8px;
+    padding-bottom:8px;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    margin-top:-4px;
+    font-weight:700;
+}
+
+.cloudproviderInputSubmit:hover{
+    background-color: #3184a1;
+    color: #000;
+    font-size: 12px;
+}
+
+
+#cloudproviderFormforAdd {
+    display:none;
+}
+
+#emptyshowcloudproviderCostsTableTD {
+    background-color: #fff;
+}
+
+table, td, th {
+    border: 0px solid #fcf7ec;
+    margin: 0 auto;
+}
+
+th {
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    background-color: #3184a1;
+    color: #373737;
+    font-size: 12px;
+}
+
+td {
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    background-color: #fff;
+    font-size: 12px;
+}
+
+select {
+    padding: 5px;
+    background-color: #fff;
+    border: 0;
+    width: 200px;
+    
+    font-size: 12px;
+}
+
+#cloudproviderForSel {
+    padding: 5px;
+    background-color: #EF6A57;
+    
+    font-weight: bold;
+    height: 30px;
+    width: 125px;
+    border: 0;
+    color: #373737;
+}
+
+#cloudproviderSuccessAdd {
+    display: none;
+}
+
+#cloudproviderDelete {
+    
+    float:left;
+    width: 100px;
+    height: 20px;
+    border: #373737 solid 0px;
+    cursor:pointer;
+    background-color: #373737;
+    color:white;
+    margin-left: 10px;
+    font-size:10px;
+    padding: 2px;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    margin-top:-4px;
+    font-weight:700;
+}
+
+#cloudproviderDelete:hover{
+    background-color:#EF6A57;
+    color: #000;
+}
+
+#cloudproviderModify {
+    
+    float:left;
+    width: 100px;
+    height: 20px;
+    border: #373737 solid 0px;
+    cursor:pointer;
+    background-color: #373737;
+    color:white;
+    margin-left: 10px;
+    font-size:10px;
+    padding: 2px;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    margin-top:-4px;
+    font-weight:700;
+}
+
+#cloudproviderModify:hover{
+    background-color:#098241;
+    color: #fff;
+}
+
+.hiddenTD{
+    background-color: #fcf7ec;
+    padding-top: 6px;
+}
+
+input {
+    
+    font-size: 12px;
+    border: 0;
+    width: 170px;
+}
+
+.cloudproviderTableHeader {
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+    text-decoration: underline;
+}
+
+.inputModify {
+    
+    font-size: 12px;
+    border:0;
+    width: 175px;
+    text-align: right;
+}
+
+.cloudproviderAddHeader {
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+    text-decoration: underline;
+}
+
+.cloudproviderAddInputSubmit {
+    
+    width: 170px;
+    border: #373737 solid 2px;
+    cursor:pointer;
+    background-color: #373737;
+    color:white;
+    margin-left: 10px;
+    font-size:14px;
+    padding-top:8px;
+    padding-bottom:8px;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    margin-top:-4px;
+    font-weight:700;
+}
+
+.cloudproviderAddInputSubmit:hover{
+    background-color:#3184a1;
+    color: #000;
+}
+
+.cloudproviderInputSel {
+    background-color: #fff;
+    background-image: url(../../img/downloadred.png);
+    background-size: 30px 30px;
+    background-position: 255px 6px;
+    background-repeat: no-repeat;
+    padding-left: 10px;
+    border:0!important;
+    height: 40px;
+    width: 300px;
+    font-size: 14px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.cloudproviderInputSel:focus{
+    background-color:#EF6A57;
+    border:#EF6A57 solid 3px;
+    background-image: url(../../img/download.png);
+}
+
+
+#cloudproviderMainMIDMainSectionRHS {
+    position: relative;
+    float: left;
+    height: 480px;
+    width: 70%;
+    text-align: center;
+    overflow: auto;
+}
+
+
+#cloudproviderMainRHS {
+    position: relative;
+    float: left;
+    height: 500px;
+    width: 20px;
+    text-align: right;
+    background-color: #fcf7ec;
+}
+
+#emptyshowcloudproviderCostsTableTD {
+    background-color: #fff;
+    text-align: center;
+}
+
+.percentageshowcloudproviderCostsTableTD {
+    text-align: right;
+}
+
+.monetaryshowcloudproviderCostsTableTD {
+    text-align: right;
+}
+
+.percentage {
+    width: 100px;
+    border: 0px;
+    text-align: right;
+    background-color: #fcf7ec;
+}
+
+.numeric {
+    
+    width: 110px;
+    border: 0px;
+    text-align: right;
+    background-color: #fcf7ec;
+}
+
+.cloudprovider_name {
+    
+    width: 200px;
+    border: 0px;
+    text-align: left;
+    background-color: #fcf7ec;
+}
+
+.email {
+    
+    width: 200px;
+    border: 0px;
+    text-align: left;
+    background-color: #fcf7ec;
+}
+
+
+.alphanumeric {
+    
+    width: 170px;
+    border: 0px;
+    text-align: right;
+    background-color: #fcf7ec;
+}
+
+.alphanumerictype {
+    width: 170px;
+    border: 0px;
+    text-align: left;
+    background-color: #fcf7ec;
+}
+
+.deleteButton {
+    
+    float:left;
+    width: 80%;
+    height: 20px;
+    border: #373737 solid 0px;
+    cursor:pointer;
+    background-color: #373737;
+    color:white;
+    margin-left: 10px;
+    font-size:10px;
+    padding: 2px;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    margin-top:-4px;
+    font-weight:700;
+}
+
+.deleteButton:hover {
+    background-color:#EF6A57;
+    color: #000;
+}
+
+.updateButton {
+    
+    float:left;
+    width: 80%;
+    height: 20px;
+    border: #373737 solid 0px;
+    cursor:pointer;
+    background-color: #373737;
+    color:white;
+    margin-left: 10px;
+    font-size:10px;
+    padding: 2px;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    margin-top:-4px;
+    font-weight:700;
+}
+
+.updateButton:hover {
+    background-color:#098241;
+    color: #000;
+}
+
+.inputModify {
+    
+    border:0;
+    width: 175px;
+    background-color: #fcf7ec;
+}
+
+#cloudproviderSelect {
+    width: 220px;
+}
+
+.cloudproviderInputSel {
+    background-color: #fff;
+    background-image: url(../../img/downloadred.png);
+    background-size: 25px 25px;
+    background-position: 185px 8px;
+    background-repeat: no-repeat;
+    padding-left: 10px;
+    border:0!important;
+    height: 40px;
+    width: 100%;
+    font-size: 14px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.cloudproviderInputSel:focus{
+    background-color:#fff;
+    border:#EF6A57 solid 3px;
+    background-image: url(../../img/downloadred.png);
+}
+
+#cloudproviderMenu {
+    display: none;
+}
+
+#showcloudproviderCostsTable {
+    text-align: right;
+}
+
+#showcloudproviderCostsTable th td {
+    width: 150px;
+}
+
+
+#cloudproviderMenuTable {
+   border: 3px;
+}
+
+.selectLocation {
+    width: 200px;
+    
+}
+
+.textarea {
+    
+    font-size: 12px;
+}
+
+#currencyShow {
+    font-family: Arial, sans-serif;
+    font-weight: 700;
+}
+
+.currencyShow {
+    font-family: Arial, sans-serif;
+    font-weight: 700;
+}

@@ -1,0 +1,505 @@
+/*
+  Created originally on : 08-Mar-2014
+  Author      : Eamonn Killian
+  Web         : www.eamonnkillian.com
+  Contact     : eamonnkillian@gmail.com
+
+  This is the main css file for the mspCostModeller web application which is designed
+  to provide a secure login authenticated application for the tracking and management
+  of the costs associated with running a Managed Service Provider (MSP).
+
+  The application includes:
+  1) A front end web interface utilising CSS styling and JQuery animation
+  2) A set of application code
+  3) A database back end in MySQL for storing the information
+
+  The business objective for the application is to enable an MSP business to model their
+  end to end costs and to isolate a set of key metrics which enable business and operational
+  decisions concerning the management of the service to be made in full cognisance of the
+  cost impacts.
+
+  The final design feature was to build this as a module for a broader set of applications
+  with an immediate follow on being the mspPriceModeller.
+
+
+    Develop a standard Default User View called Mainpage with styles
+
+*/
+
+#dcassetsMain {
+    background-color: #fff;
+    display: block;
+    margin: 0 auto;
+    padding: 5%;
+    width: 100%;
+    max-width: 1000px;
+    height: 550px;
+}
+
+#dcAssetsMainMID {
+    position: relative;
+    float: left;
+    height: 500px;
+    width: 100%;
+    text-align: left;
+}
+
+#dcAssetsMainMIDTopBanner {
+    position: absolute;
+    top:0px;
+    left:0px;
+    height: 70px;
+    width: 100%;
+    z-index: 10;
+}
+
+#dcAssetsMainMIDTopBannerLHS {
+    position: relative;
+    float: left;
+    height: 70px;
+    width: 30%;
+}
+
+#dcAssetsMainMIDTopBannerRHS {
+    position: relative;
+    float: left;
+    height: 65px;
+    width: 70%;
+    font-size: 16px;
+}
+
+#dcAssetsMainMIDTopBannerRHSCommandOutput {
+    position: relative;
+    height: 30px;
+    width: 400px;
+    border-radius: 10px;
+    border: 0;
+    padding-top: 8px;
+    padding-left: 10px;
+    font-size: 12px;
+}
+
+#dcAssetsMainMIDMainSection {
+    position: absolute;
+    top:0px;
+    left:0px;
+    width: 100%;
+    padding-top: 10px;
+    height: 470px;
+}
+
+#dcAssetsMainMIDMainSectionLHS {
+    position: relative;
+    float: left;
+    height: 480px;
+    width: 30%;
+}
+
+.dcAssetsSelector {
+    position: relative;
+    float: left;
+    padding: 5px;
+}
+
+.dcAssetsInputSubmit {
+    
+    float:left;
+    width: 200px;
+    border: #373737 solid 4px;
+    cursor:pointer;
+    background-color: #373737;
+    color:white;
+    margin-left: 10px;
+    font-size:12px;
+    padding-top:8px;
+    padding-bottom:8px;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    margin-top:-4px;
+    font-weight:700;
+}
+
+.dcAssetsInputSubmit:hover{
+    background-color: #3184a1;
+    color: #000;
+    font-size: 12px;
+}
+
+
+#dcAssetsFormforAdd {
+    display:none;
+}
+
+#emptyshowdcAssetsCostsTableTD {
+    background-color: #fff;
+}
+
+table, td, th {
+    border: 0px solid #fcf7ec;
+    margin: 0 auto;
+}
+
+th {
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    background-color: #3184a1;
+    color: #000;
+    font-size: 12px;
+}
+
+td {
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    background-color: #fff;
+    font-size: 12px;
+}
+
+select {
+    padding: 5px;
+    background-color: #fff;
+    border: 0;
+    width: 200px;
+    font-size: 12px;
+}
+
+#dcAssetsForSel {
+    padding: 5px;
+    background-color: #EF6A57;
+    font-weight: bold;
+    height: 30px;
+    width: 125px;
+    border: 0;
+    color: #fff;
+}
+
+#dcAssetsSuccessAdd {
+    display: none;
+}
+
+#dcAssetsDelete {
+    float:left;
+    width: 100px;
+    height: 20px;
+    border: #373737 solid 0px;
+    cursor:pointer;
+    background-color: #373737;
+    color:white;
+    margin-left: 10px;
+    font-size:10px;
+    padding: 2px;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    margin-top:-4px;
+    font-weight:700;
+}
+
+#dcAssetsDelete:hover{
+    background-color:#EF6A57;
+    color: #000;
+}
+
+#dcAssetsModify {
+    
+    float:left;
+    width: 100px;
+    height: 20px;
+    border: #373737 solid 0px;
+    cursor:pointer;
+    background-color: #373737;
+    color:white;
+    margin-left: 10px;
+    font-size:10px;
+    padding: 2px;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    margin-top:-4px;
+    font-weight:700;
+}
+
+#dcAssetsModify:hover{
+    background-color:#098241;
+    color: #fff;
+}
+
+.hiddenTD{
+    background-color: #fff;
+    padding-top: 6px;
+}
+
+input {
+    border: 0;
+    width: 170px;
+    
+    font-size: 12px;
+}
+
+.dcAssetsTableHeader {
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+    text-decoration: underline;
+}
+
+.inputModify {
+    font-size: 12px;
+    border:0;
+    width: 175px;
+    text-align: right;
+    background-color: #fcf7ec;
+}
+
+.dcAssetsAddHeader {
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+    text-decoration: underline;
+}
+
+.dcAssetsAddInputSubmit {
+    
+    width: 170px;
+    border: #373737 solid 2px;
+    cursor:pointer;
+    background-color: #373737;
+    color:white;
+    margin-left: 10px;
+    font-size:14px;
+    padding-top:8px;
+    padding-bottom:8px;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    margin-top:-4px;
+    font-weight:700;
+}
+
+.dcAssetsAddInputSubmit:hover{
+    background-color:#3184a1;
+    color: #000;
+}
+
+.dcAssetsInputSel {
+    background-color: #fff;
+    background-image: url(../../img/downloadred.png);
+    background-size: 30px 30px;
+    background-position: 255px 6px;
+    background-repeat: no-repeat;
+    padding-left: 10px;
+    border:0!important;
+    height: 40px;
+    width: 300px;
+    font-size: 14px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.dcAssetsInputSel:focus{
+    background-color:#EF6A57;
+    border:#EF6A57 solid 3px;
+    background-image: url(../../img/download.png);
+}
+
+
+#dcAssetsMainMIDMainSectionRHS {
+    position: relative;
+    float: left;
+    height: 480px;
+    width: 70%;
+    text-align: center;
+    overflow: auto;
+}
+
+
+#dcAssetsMainRHS {
+    position: relative;
+    float: left;
+    height: 500px;
+    width: 20px;
+    text-align: right;
+}
+
+#emptyshowdcAssetsCostsTableTD {
+    background-color: #fff;
+    text-align: center;
+}
+
+.percentageshowdcAssetsCostsTableTD {
+    text-align: right;
+}
+
+.monetaryshowdcAssetsCostsTableTD {
+    text-align: right;
+}
+
+.percentage {
+    width: 80px;
+    border: 0px;
+    text-align: right;
+    background-color: #fcf7ec;
+}
+
+.numeric {
+    
+    width: 110px;
+    border: 0px;
+    text-align: right;
+    background-color: #fcf7ec;
+}
+
+.monetary {
+    
+    width: 110px;
+    border: 0px;
+    text-align: right;
+    background-color: #fcf7ec;
+}
+
+.dcAssetsname {
+    
+    width: 200px;
+    border: 0px;
+    text-align: left;
+    background-color: #fcf7ec;
+}
+
+.email {
+    
+    width: 200px;
+    border: 0px;
+    text-align: left;
+    background-color: #fcf7ec;
+}
+
+
+.alphanumeric {
+    
+    width: 170px;
+    border: 0px;
+    text-align: left;
+    background-color: #fcf7ec;
+}
+
+.alphanumerictype {
+    width: 170px;
+    border: 0px;
+    text-align: left;
+    background-color: #fcf7ec;
+}
+
+.deleteButton {
+    
+    float:left;
+    width: 80%;
+    height: 20px;
+    border: #373737 solid 0px;
+    cursor:pointer;
+    background-color: #373737;
+    color:white;
+    margin-left: 10px;
+    font-size:10px;
+    padding: 2px;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    margin-top:-4px;
+    font-weight:700;
+}
+
+.deleteButton:hover {
+    background-color:#EF6A57;
+    color: #000;
+}
+
+.updateButton {
+    
+    float:left;
+    width: 80%;
+    height: 20px;
+    border: #373737 solid 0px;
+    cursor:pointer;
+    background-color: #373737;
+    color:white;
+    margin-left: 10px;
+    font-size:10px;
+    padding: 2px;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    margin-top:-4px;
+    font-weight:700;
+}
+
+.updateButton:hover {
+    background-color:#098241;
+    color: #000;
+}
+
+#dcAssetsSelect {
+    width: 220px;
+}
+
+.dcAssetsInputSel {
+    background-color: #fff;
+    background-image: url(../../img/downloadred.png);
+    background-size: 25px 25px;
+    background-position: 185px 8px;
+    background-repeat: no-repeat;
+    padding-left: 10px;
+    border:0!important;
+    height: 40px;
+    width: 100%;
+    font-size: 14px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.dcAssetsInputSel:focus{
+    background-color:#fff;
+    border:#EF6A57 solid 3px;
+    background-image: url(../../img/downloadred.png);
+}
+
+#dcAssetsMenu {
+    display: none;
+}
+
+#showdcAssetsCostsTable {
+    text-align: right;
+}
+
+#showdcAssetsCostsTable th td {
+    width: 150px;
+}
+
+
+#dcAssetsMenuTable {
+   border: 3px;
+}
+
+.selectLocation {
+    width: 200px;
+    
+}
+
+.textarea {
+    
+    font-size: 12px;
+}
+
+#currencyShow {
+    font-family: Arial, sans-serif;
+    font-weight: 700;
+}
+
+.currencyShow {
+    font-family: Arial, sans-serif;
+    font-weight: 700;
+}
+

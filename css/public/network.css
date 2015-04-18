@@ -1,0 +1,480 @@
+/*
+  Created originally on : 19-Mar-2014
+  Author      : Eamonn Killian
+  Web         : www.eamonnkillian.com
+  Contact     : eamonnkillian@gmail.com
+
+  This is the main css file for the Cost Model for DC Assets part of the web application 
+  which is designed to provide a module for creating, managing and tracking of the costs associated 
+  with the DC Assets aspects of a Managed Service Provider (MSP) or Cloud Service Provider(CSP).
+
+    Develop a standard Default User View called Mainpage with styles
+
+*/
+
+
+#networkMain {
+    background-color: #fff;
+    display: block;
+    margin: 0 auto;
+    padding: 5%;
+    width: 100%;
+    max-width: 1000px;
+    height: 550px;
+}
+
+
+
+#networkMainMID {
+    position: relative;
+    float: left;
+    height: 500px;
+    width: 100%;
+    text-align: left;
+}
+
+#networkMainMIDTopBanner {
+    position: absolute;
+    top:0px;
+    left:0px;
+    height: 70px;
+    width: 100%;
+    z-index: 10;
+}
+
+#networkMainMIDTopBannerLHS {
+    position: relative;
+    float: left;
+    height: 70px;
+    width: 30%;
+}
+
+#networkMainMIDTopBannerRHS {
+    position: relative;
+    float: left;
+    height: 65px;
+    width: 70%;
+
+    font-size: 16px;
+}
+
+#networkMainMIDTopBannerRHSCommandOutput {
+    position: relative;
+    height: 30px;
+    width: 400px;
+    border-radius: 10px;
+    border: 0;
+    padding-top: 8px;
+    padding-left: 10px;
+    font-size: 12px;
+}
+
+#networkMainMIDMainSection {
+    position: absolute;
+    top:0px;
+    left:0px;
+    width: 100%;
+    padding-top: 10px;
+    height: 470px;
+}
+
+#networkMainMIDMainSectionLHS {
+    position: relative;
+    float: left;
+    height: 480px;
+    width: 30%;
+}
+
+.networkSelector {
+    position: relative;
+    float: left;
+    padding: 5px;
+}
+
+.networkInputSubmit {
+    float:left;
+    width: 200px;
+    border: #373737 solid 4px;
+    cursor:pointer;
+    background-color: #373737;
+    color:white;
+    margin-left: 10px;
+    font-size:12px;
+    padding-top:8px;
+    padding-bottom:8px;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    margin-top:-4px;
+    font-weight:700;
+}
+
+.networkInputSubmit:hover{
+    background-color: #3184a1;
+    color: #000;
+    font-size: 12px;
+}
+
+#networkFormforAdd {
+    display:none;
+}
+
+table, td, th {
+    border: 0px solid #fcf7ec;
+    margin: 0 auto;
+    font-size: 14px;
+}
+
+th {
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    background-color: #3184a1;
+    color: #000;
+    font-size: 12px;
+}
+
+td {
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    background-color: #fff;
+    font-size: 12px;
+}
+
+select {
+    padding: 5px;
+    background-color: #fff;
+    border: 0;
+    width: 125px;
+
+    font-size: 12px;
+    text-align: right;
+}
+
+#networkForSel {
+    padding: 5px;
+    background-color: #EF6A57;
+
+    font-weight: bold;
+    height: 30px;
+    width: 125px;
+    border: 0;
+    color: #373737;
+}
+
+#networkSuccessAdd {
+    display: none;
+}
+
+#networkDelete {
+
+    float:left;
+    width: 100px;
+    height: 20px;
+    border: #373737 solid 0px;
+    cursor:pointer;
+    background-color: #373737;
+    color:white;
+    margin-left: 10px;
+    font-size:10px;
+    padding: 2px;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    margin-top:-4px;
+    font-weight:700;
+}
+
+#networkDelete:hover{
+    background-color:#EF6A57;
+    color: #000;
+}
+
+#networkModify {
+
+    float:left;
+    width: 100px;
+    height: 20px;
+    border: #373737 solid 0px;
+    cursor:pointer;
+    background-color: #373737;
+    color:white;
+    margin-left: 10px;
+    font-size:10px;
+    padding: 2px;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    margin-top:-4px;
+    font-weight:700;
+}
+
+#networkModify:hover{
+    background-color:#098241;
+    color: #fff;
+}
+
+.hiddenTD{
+    background-color: #fcf7ec;
+    padding-top: 6px;
+}
+
+input {
+    border: 0;
+    width: 170px;
+}
+
+.networkTableHeader {
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+    text-decoration: underline;
+}
+
+.networkAddHeader {
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+    text-decoration: underline;
+}
+
+.networkAddInputSubmit {
+
+    width: 170px;
+    border: #373737 solid 2px;
+    cursor:pointer;
+    background-color: #373737;
+    color:white;
+    margin-left: 10px;
+    font-size:14px;
+    padding-top:8px;
+    padding-bottom:8px;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    margin-top:-4px;
+    font-weight:700;
+}
+
+.networkAddInputSubmit:hover{
+    background-color:#3184a1;
+    color: #000;
+}
+
+.networkInputSel {
+    background-color: #fff;
+    background-image: url(../../img/downloadred.png);
+    background-size: 30px 30px;
+    background-position: 255px 6px;
+    background-repeat: no-repeat;
+    padding-left: 10px;
+    border:0!important;
+    height: 40px;
+    width: 300px;
+    font-size: 14px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.networkInputSel:focus{
+    background-color:#EF6A57;
+    border:#EF6A57 solid 3px;
+    background-image: url(../../img/download.png);
+}
+
+
+#networkMainMIDMainSectionRHS {
+    position: relative;
+    float: left;
+    height: 480px;
+    width: 70%;
+    text-align: center;
+    overflow: auto;
+}
+
+
+#networkMainRHS {
+    position: relative;
+    float: left;
+    height: 500px;
+    width: 20px;
+    text-align: right;
+}
+
+#emptyshownetworkCostsTableTD {
+    background-color: #fff;
+    text-align: center;
+}
+
+.percentageshownetworkCostsTableTD {
+    text-align: right;
+}
+
+.monetaryshownetworkCostsTableTD {
+    text-align: right;
+}
+
+.percentage {
+    width: 50px;
+    border: 0px;
+    text-align: right;
+    background-color: #fcf7ec;
+}
+
+.monetary {
+    width: 110px;
+    border: 0px;
+    text-align: right;
+    background-color: #fcf7ec;
+}
+
+.alphanumeric {
+
+    width: 170px;
+    border: 0px;
+    text-align: right;
+    background-color: #fcf7ec;
+}
+
+.alphanumerictype {
+
+    width: 170px;
+    border: 0px;
+    text-align: left;
+    background-color: #fcf7ec;
+}
+
+.deleteButton {
+
+    float:left;
+    width: 80%;
+    height: 20px;
+    border: #373737 solid 0px;
+    cursor:pointer;
+    background-color: #373737;
+    color:white;
+    margin-left: 10px;
+    font-size:10px;
+    padding: 2px;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    margin-top:-4px;
+    font-weight:700;
+}
+
+.deleteButton:hover {
+    background-color:#EF6A57;
+    color: #000;
+}
+
+.updateButton {
+
+    float:left;
+    width: 80%;
+    height: 20px;
+    border: #373737 solid 0px;
+    cursor:pointer;
+    background-color: #373737;
+    color:white;
+    margin-left: 10px;
+    font-size:10px;
+    padding: 2px;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    margin-top:-4px;
+    font-weight:700;
+}
+
+.updateButton:hover {
+    background-color:#098241;
+    color: #000;
+}
+
+.inputModify {
+
+    font-size: 12px;
+    border:0;
+    width: 75px;
+    text-align: right;
+    background-color: #fcf7ec;
+}
+
+#networkSelect {
+    width: 100%;
+}
+
+.networkInputSel {
+    background-color: #fff;
+    background-image: url(../../img/downloadred.png);
+    background-size: 25px 25px;
+    background-position: 200px 8px;
+    background-repeat: no-repeat;
+    padding-left: 10px;
+    border:0!important;
+    height: 40px;
+    width: 100%;
+    font-size: 14px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.networkInputSel:focus{
+    background-color:#fff;
+    border:#EF6A57 solid 3px;
+    background-image: url(../../img/downloadred.png);
+}
+
+#networkMenu {
+    display: none;
+}
+
+#shownetworkCostsTable {
+    text-align: right;
+}
+
+#shownetworkCostsTable th td {
+    width: 150px;
+}
+
+
+#networkMenuTable {
+   border: 3px;
+}
+
+.selectLocation {
+    width: 200px;
+
+}
+
+#currencyShow {
+    font-family: Arial, sans-serif;
+    font-weight: 700;
+}
+
+.currencyShow {
+    font-family: Arial, sans-serif;
+    font-weight: 700;
+}
+
+.dateType {
+
+    font-size: 12px;
+    background-color: #fcf7ec;
+    text-align: right;
+}
+
+.datepicker {
+
+    font-size: 12px;
+    background-color: #fcf7ec;
+    text-align: right;
+}
+
+.ui-datepicker-header {
+    background-color: #000;
+}

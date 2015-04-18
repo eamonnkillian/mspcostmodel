@@ -1,0 +1,100 @@
+/*
+  Created originally on : 08-Mar-2014
+  Author      : Eamonn Killian
+  Web         : www.eamonnkillian.com
+  Contact     : eamonnkillian@gmail.com
+
+  This is the main css file for the mspCostModeller web application which is designed
+  to provide a secure login authenticated application for the tracking and management
+  of the costs associated with running a Managed Service Provider (MSP).
+
+  The application includes:
+  1) A front end web interface utilising CSS styling and JQuery animation
+  2) A set of application code
+  3) A database back end in MySQL for storing the information
+
+  The business objective for the application is to enable an MSP business to model their
+  end to end costs and to isolate a set of key metrics which enable business and operational
+  decisions concerning the management of the service to be made in full cognisance of the
+  cost impacts.
+
+  The final design feature was to build this as a module for a broader set of applications
+  with an immediate follow on being the mspPriceModeller.
+*/
+
+/*
+
+    Develop a standard Default User View called Dashboard with styles
+
+*/
+
+
+#dashboardLHS {
+    position: relative;
+    float: left;
+    height: 480px;
+    width: 20px;
+    text-align: left;
+    background-color: #fff;
+}
+
+#dashboardMainMID {
+    position: relative;
+    float: left;
+    height: 480px;
+    width: 940px;
+    text-align: left;
+    background-color: #fff;
+    overflow: auto;
+}
+
+#dashboardMainRHS {
+    position: relative;
+    float: left;
+    height: 480px;
+    width: 20px;
+    text-align: right;
+    background-color: #fff;
+}
+
+.fancybutton {
+    font-family: 'Titillium Web', sans-serif;
+    float:left;
+    width: 100px;
+    height: 120px;
+    border: #373737 solid 4px;
+    cursor:pointer;
+    background-color: #373737;
+    color:white;
+    margin-left: 10px;
+    font-size:14px;
+    padding-top:8px;
+    padding-bottom:8px;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    margin-top:-4px;
+    font-weight:700;
+}
+
+.fancybutton:hover{
+    background-color:#EF6A57;
+    color: #000;
+}
+
+#dashboardTable {
+    position: relative;
+    float: right;
+    width: 920px;
+    height: 250px;
+    text-align: center;
+}
+
+.dashboardTable {
+    //padding: 20px;
+}
+
+table th {
+    font-size: 20px;
+    width: 100%;
+}
